@@ -1,3 +1,3 @@
 [servers]
-servidor_1 ansible_host=54.184.220.5
-servidor_2 ansible_host=35.163.20.73
+servidor_1 ansible_host=34.214.121.134
+servidor_2 ansible_host=54.245.181.236
