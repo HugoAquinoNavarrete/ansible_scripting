@@ -1,0 +1,12 @@
+---
+- name: Instala Python
+  hosts: servers
+  become: yes
+
+  tasks:
+  - name: Instala Python
+    apt:
+      name: python3
+      state: present
+
+
