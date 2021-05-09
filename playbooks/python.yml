@@ -1,12 +1,20 @@
 ---
 - name: Instala Python
-  hosts: servers
+  hosts: servers servers_otrasubred
   become: yes
 
   tasks:
-  - name: Instala Python
+  - name: Actualizar paquetes apt
+    apt:
+      update_cache: "yes"
+      force_apt_get: "yes"
+
+  - name: Instala Python3
     apt:
       name: python3
       state: present
 
-
+  - name: Instala Python
+    apt:
+      name: python
+      state: present
