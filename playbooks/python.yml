@@ -1,6 +1,6 @@
 ---
 - name: Instala Python
-  hosts: servers servers_otrasubred
+  hosts: servers 
   become: yes
 
   tasks:
