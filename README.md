@@ -12,7 +12,7 @@ Se encuentra información de archivos de texto plano que usaremos a lo largo del
 
 ## 3.  En el directorio `bin`
 
-Se encuentran los scripts de bash shell que llamarán a los playbooks. 
+Se encuentran los scripts de bash shell que llamarán a los playbooks y que fueron ajustados para ejecutarse dentro de pipelines.
 
 ## 4.  En el directorio `playbooks`
 
@@ -24,4 +24,4 @@ Se encuentra un archivo de texto que usaremos cuando hagamos despliegues en ngin
 
 ## 6.  En el directorio `doc`
 
-Se encuentra la presentaćión.
+Se encuentra la presentación.
