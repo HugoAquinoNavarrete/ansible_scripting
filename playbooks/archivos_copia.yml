@@ -13,7 +13,7 @@
     - name: Copia un archivo local a los directorios creados en la VM
       copy:
         src: "../archivos/archivo.txt"
-        dest: $HOME/meses/{{ item }}
+        dest: $HOME/{{ item }}
       with_items: "{{ directorios }}"
 
  
