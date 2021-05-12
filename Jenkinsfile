@@ -18,5 +18,12 @@ pipeline {
             }
         }
 
+        stage('Prueba 4') {
+            steps {
+                echo 'Prueba 4....'
+            }
+        }
+
+
    }
 }
