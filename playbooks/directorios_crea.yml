@@ -3,12 +3,13 @@
 - hosts: servers
   become_user: ubuntu
 
+  vars:
+    directorios: "{{ lookup('file','../archivos/directorios.txt').split('\n') }}"
+
   tasks:
     - name: Crea directorios
       file:
          path: $HOME/{{ item }}
          state: directory
-      with_items: [ 'uno', 'dos', 'tres', 'cuatro', 'cinco', 'seis']
-
-
+      with_items: "{{ directorios }}"
 

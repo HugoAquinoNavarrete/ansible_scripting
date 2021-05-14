@@ -3,12 +3,12 @@
 - hosts: servers
   become_user: ubuntu
 
+  vars:
+    directorios: "{{ lookup('file','../archivos/directorios.txt').split('\n') }}"
+
   tasks:
     - name: Borra directorios
       file:
          path: $HOME/{{ item }}
          state: absent
-      with_items: [ 'uno', 'dos', 'tres', 'cuatro', 'cinco', 'seis']
-
-
-
+      with_items: "{{ directorios }}"
