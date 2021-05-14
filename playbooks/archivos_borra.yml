@@ -1,0 +1,19 @@
+---
+
+- hosts: servers
+
+  vars:
+    archivos: "{{ lookup('file','../archivos/directorios.txt').split('\n') }}"
+
+  tasks:
+    - name: Imprime cantidad de líneas en el archivo
+      debug:
+        msg: "{{ archivos | length }}"
+
+    - name: Borra archivos del directorio $HOME
+      file:
+         path: $HOME/{{ item }}
+         state: absent
+      with_items: "{{ archivos }}"
+
+ 
