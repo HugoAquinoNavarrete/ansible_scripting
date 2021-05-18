@@ -1,3 +1,0 @@
-[servers]
-servidor_1 ansible_host=
-servidor_2 ansible_host=
