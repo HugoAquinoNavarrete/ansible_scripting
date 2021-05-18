@@ -2,9 +2,9 @@
 
 Repositorio para practicar Ansible scripting.
 
-## 1. El arhivo `ansible_inventario.txt` 
+## 1. El arhivo `ansible_inventario.txt` y `ansible_inventario_win.txt`
 
-Contiene el inventario de nodos a ser gestionados.
+Contiene el inventario de los nodos a ser gestionados.
 
 ## 2. En el directorio `archivos` 
 
