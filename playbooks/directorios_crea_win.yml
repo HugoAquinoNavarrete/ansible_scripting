@@ -10,7 +10,7 @@
     - name: Crea directorios
       ansible.windows.win_file:
       file:
-         path: $HOME/{{ item }}
+         path: C:\{{ item }}
          state: directory
       with_items: "{{ directorios }}"
 
