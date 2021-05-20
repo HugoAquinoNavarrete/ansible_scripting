@@ -1,0 +1,13 @@
+---
+
+- hosts: servers_win
+
+  vars:
+    directorios: "{{ lookup('file','../archivos/directorios.txt').split('\n') }}"
+
+  tasks:
+    - name: Borra directorios
+      ansible.windows.win_file:
+         path: C:\{{ item }}
+         state: absent
+      with_items: "{{ directorios }}"
