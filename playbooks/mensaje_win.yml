@@ -4,5 +4,5 @@
   tasks:
     - name: Envia mensaje
       community.windows.win_msg:
-        display_seconds = 60
+        display_seconds: 60
         msg: Mensaje de prueba generado desde un pipeline en Jenkins usando Ansible a una VM Windows
