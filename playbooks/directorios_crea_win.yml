@@ -1,7 +1,6 @@
 ---
 
 - hosts: servers_win
-  become_user: ubuntu
 
   vars:
     directorios: "{{ lookup('file','../archivos/directorios.txt').split('\n') }}"
@@ -9,7 +8,6 @@
   tasks:
     - name: Crea directorios
       ansible.windows.win_file:
-      file:
          path: C:\{{ item }}
          state: directory
       with_items: "{{ directorios }}"
