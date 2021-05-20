@@ -1,0 +1,17 @@
+---
+
+- hosts: servers_win
+
+  vars:
+    archivos: "{{ lookup('file','../archivos/directorios.txt').split('\n') }}"
+
+  tasks:
+    - name: Imprime cantidad de líneas en el archivo
+      debug:
+        msg: "{{ archivos | length }}"
+
+    - name: Borra archivos copiados en la VM
+      ansible.windows.win_file:
+        path: C:\{{ item }}
+        state: absent
+      with_items: "{{ archivos }}"

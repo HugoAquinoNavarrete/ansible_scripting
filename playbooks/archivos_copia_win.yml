@@ -1,0 +1,18 @@
+---
+
+- hosts: servers_win
+
+  vars:
+    directorios: "{{ lookup('file','../archivos/directorios.txt').split('\n') }}"
+
+  tasks:
+    - name: Imprime cantidad de líneas en el archivo
+      debug:
+        msg: "{{ directorios | length }}"
+
+    - name: Copia un archivo local a los directorios creados en la VM
+      ansible.windows.win_copy:
+        src: "../archivos/archivo.txt"
+        dest: C:\{{ item }}
+      with_items: "{{ directorios }}"
+
