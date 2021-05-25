@@ -1,1 +1,1 @@
-ansible-playbook -i ./ansible_inventario.txt ./playbooks/python.yml --private-key=./key_lab_jenkins -e"host=servers" -v -u ubuntu
+ansible-playbook -i ./ansible_inventario.txt ./playbooks/python.yml --private-key=./$1 -e"host=servers" -v -u ubuntu
